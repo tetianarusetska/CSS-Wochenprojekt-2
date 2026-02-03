@@ -74,12 +74,19 @@ body {
 /* IMAGE AREA */
 
 .imageArea { 
-    width: 120px;
-    height: 120px;
-    margin-top: 20px;
+    width: 180px;
+    height: 180px;
+    margin-top: 15px;
 }
 
 /* TEXT AREA */
+
+.textArea {
+    margin-left: 20px;
+    width: 100%;
+    max-width: 100%;
+}
+
 /* FLEXBOX CONTAINER 1 */
 
 .flexboxContainer {
@@ -88,10 +95,17 @@ body {
     gap: 80px;
     font-weight: 400;
     font-size: 17px;
+    justify-content: space-around;
 }
 .flexboxItem1, .flexboxItem2, .flexboxItem3  {
     text-align: center;
     font-weight: 500;
+}
+
+/* USERNAME */
+
+.username {
+    margin-left: 20px;
 }
 
 /* DESCRIPTION */
@@ -99,6 +113,7 @@ body {
 .bio {
     font-size: 16px;
     font-weight: 400;
+    margin-left: 20px;
 }
  .bio a {
     text-decoration: none;
@@ -110,6 +125,8 @@ body {
 .buttons {
     display: flex;
     gap: 8px;
+    margin-left: 20px;
+    width: 96%;  
 }
 
 .mainButton1 {
@@ -134,3 +151,20 @@ body {
     text-align: center;
 }
 
+/* Second Container */
+/* Gallery */
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+    margin-top: 40px;
+    max-width: 800px;
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    display: block;
+}
