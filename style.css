@@ -42,13 +42,52 @@
     --buttonColor: rgb(43, 43, 43);
     --white: rgb(255, 255, 255);
 }
+
 body {
     margin: 80px;
     font-family: var(--main-font);
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
-/* HEADER */
+
+.container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+}
+
+/* NAVIGATION */
+
+.sidebarItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.sidebarItem svg {
+    flex-shrink: 0;
+    display: block;
+}
+
+.topbar {
+    height: 30px;
+    width: 70%;
+    margin-bottom: 20px;
+    display: none;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* USERNAME */
 
 .username {
     display: flex;
@@ -68,12 +107,12 @@ body {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    align-items: start ;
+    align-items: start;
 }
 
 /* IMAGE AREA */
 
-.imageArea { 
+.imageArea {
     width: 180px;
     height: 180px;
     margin-top: 15px;
@@ -97,7 +136,10 @@ body {
     font-size: 17px;
     justify-content: space-around;
 }
-.flexboxItem1, .flexboxItem2, .flexboxItem3  {
+
+.flexboxItem1,
+.flexboxItem2,
+.flexboxItem3 {
     text-align: center;
     font-weight: 500;
 }
@@ -115,10 +157,11 @@ body {
     font-weight: 400;
     margin-left: 20px;
 }
- .bio a {
+
+.bio a {
     text-decoration: none;
     color: var(--accentColor);
- }
+}
 
 /* 2 BUTTONS */
 
@@ -126,7 +169,7 @@ body {
     display: flex;
     gap: 8px;
     margin-left: 20px;
-    width: 96%;  
+    width: 96%;
 }
 
 .mainButton1 {
@@ -164,7 +207,51 @@ body {
 
 .gallery img {
     width: 100%;
-    aspect-ratio: 1 / 1; 
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 767px) {
+    .flexboxContainer {
+        flex-direction: column;
+        justify-content: right;
+        gap: 10px;
+        font-size: 15px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .topbar {
+        display: initial;
+    }
+    .topbarItems {
+         display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+    .container {
+        grid-template-columns: 220px 1fr;
+    }
 }
