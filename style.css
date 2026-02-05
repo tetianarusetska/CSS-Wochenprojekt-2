@@ -230,7 +230,7 @@ ul li a {
         grid-template-columns: 1fr;
     }
     .topbar {
-        display: initial;
+        display: flex;
     }
     .topbarItems {
          display: flex;
