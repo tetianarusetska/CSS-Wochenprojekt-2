@@ -229,14 +229,8 @@ ul li a {
     .gallery {
         grid-template-columns: 1fr;
     }
-    .topbar {
-        display: initial;
-    }
-    .topbarItems {
-         display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
+    .topbar { display: initial; } 
+    .topbarItems { display: flex; flex-direction: row; justify-content: space-between; }
 
     .sidebar {
         display: none;
