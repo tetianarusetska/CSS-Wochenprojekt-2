@@ -230,10 +230,12 @@ ul li a {
         grid-template-columns: 1fr;
     }
     .topbar {
-        display: flex;
+        display: initial;
     }
     .topbarItems {
-         display: initial;
+         display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
 
     .sidebar {
